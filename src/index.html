@@ -11,11 +11,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div class="navbar">
-    <a routerLink="logout">Logout</a>
-  </div>
+    <mat-toolbar class="navbar">
+      <a routerLink="logout">Logout</a>
+    </mat-toolbar>
   <mat-drawer-container class="sidenav">
-    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer mode="side" opened class="sidenav-content">Drawer content</mat-drawer>
   </mat-drawer-container>
   <app-root></app-root>
 </body>

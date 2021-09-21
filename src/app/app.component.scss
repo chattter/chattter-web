@@ -1,6 +1,22 @@
-.main-content{
-    padding-left: 5%;
+
+body, html{
+    padding: 0px;
+    margin: 0px;
+    min-height: 100%;
+    min-width: max-content;
+}.main-content{
+    padding-top:100px;
     background-color: #313131;
-    height: 100%;
-    width: 100%;
+    text-align:center;
+    min-height: 84.8vh;
+    width: 206.6vh;
+    text-align: center;
+    .chat-box{
+        border: 1px solid white;
+        margin-left: 250px;
+        margin-right: 250px;
+        background-color: white;
+        border-radius: 4px;
+        height: 500px;
+    }
 }
