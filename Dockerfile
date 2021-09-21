@@ -15,9 +15,6 @@ COPY ./package-lock.json .
 # into the container so we get docker cache benefits
 RUN npm install
 
-# don't allow any dependencies with vulnerabilities
-#RUN npx audit-ci --low
-
 # running ngcc before build_prod lets us utilize the docker
 # cache and significantly speeds up builds without requiring us
 # to import/export the node_modules folder from the container
@@ -27,7 +24,7 @@ COPY ./angular.json .
 COPY ./tsconfig.json .
 COPY ./src ./src
 
-RUN npm run build_prod
+RUN npm run build
 
 # build minified version of frontend, served using caddy
 FROM caddy:alpine
