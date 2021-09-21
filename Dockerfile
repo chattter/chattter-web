@@ -22,6 +22,7 @@ RUN npm run ngcc
 
 COPY ./angular.json .
 COPY ./tsconfig.json .
+COPY ./tsconfig.app.json .
 COPY ./src ./src
 
 RUN npm run build
