@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+html,body{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    //background-color: #313131;
+}
+.navbar{
+    text-align: right;
+    padding-right: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    color: white;
+    background-color: #272727;
+}
+.sidenav{
+    background-color: #272727;
+    color: white;
+    height: 100%;
+    position: fixed;
+}
