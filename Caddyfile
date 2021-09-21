@@ -1,0 +1,29 @@
+# Global caddy config options must be first
+{
+    admin off
+    auto_https off
+}
+
+# Bind to port 80
+:80
+
+respond /site.cfg "api_baseurl={env.API_BASEURL}
+git_shasum={env.GIT_SHASUM}"
+
+# Serve static files
+file_server
+
+# Fallback to index.html for everything but assets
+@html {
+    not path *.js *.css *.png *.svg *.pdf *.eot *.ttf *.woff *.woff2 *.webmanifest /manifest.json /site.cfg
+    file index.html
+}
+
+handle_errors {
+    header Cache-Control no-store
+}
+
+rewrite @html {http.matchers.file.relative}
+
+# Don't cache index.html
+header @html Cache-Control no-store
